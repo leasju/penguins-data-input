@@ -88,7 +88,4 @@ No dashboard imputado, por exemplo, destacam-se padrões como:
 4. Consulte o relatório final (metodologia e justificativas):
    - `Penguins Dataset - Relatório Final.pdf`
 
----
 
-## 📌 Conclusão (resumo)
-O projeto demonstrou a importância de tratar dados ausentes com técnicas apropriadas e justificadas. O uso de **KNN** (com normalização) preservou padrões relevantes nas variáveis numéricas, enquanto **ffill** e imputação por **características morfológicas** mantiveram coerência nas variáveis categóricas. Os dashboards finais ficaram mais completos e confiáveis para análise. :contentReference[oaicite:27]{index=27}
