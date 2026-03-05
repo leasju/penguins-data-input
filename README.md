@@ -16,67 +16,64 @@ Trabalho em grupo (4 alunos) e avaliação em aula após arguição.
 Fonte do dataset (Kaggle):
 https://www.kaggle.com/code/parulpandey/penguin-dataset-the-new-iris
 
-O conjunto contém características morfológicas de pinguins (ex.: medidas do bico, nadadeira e massa corporal), com variáveis categóricas como **species**, **island** e **sex**. :contentReference[oaicite:5]{index=5}
+O conjunto contém características morfológicas de pinguins (ex.: medidas do bico, nadadeira e massa corporal), com variáveis categóricas como **species**, **island** e **sex**. 
 
 ---
 
 ## 📁 Arquivos do repositório
 - `Penguins - Imputação de Dados - Jupyther Notebook.ipynb`  
-  Notebook com EDA, imputações, justificativas e avaliação das distribuições (antes vs depois). :contentReference[oaicite:6]{index=6}
+  Notebook com EDA, imputações, justificativas e avaliação das distribuições (antes vs depois).
 - `Penguins_Dashboard_BI.pbix`  
-  Dashboard no Power BI (base original + base imputada). :contentReference[oaicite:7]{index=7}
+  Dashboard no Power BI (base original + base imputada). 
 - `Penguins_Dashboard_BI_pdf.pdf`  
-  Exportação do dashboard para PDF (visão rápida). :contentReference[oaicite:8]{index=8}
+  Exportação do dashboard para PDF (visão rápida). 
 - `Penguins Dataset - Relatório Final.pdf`  
-  Relatório com metodologia, justificativas e conclusões. :contentReference[oaicite:9]{index=9}
+  Relatório com metodologia, justificativas e conclusões. 
 
 ---
 
 ## ✅ O que foi implementado (mapeado ao enunciado)
 
 ### 1) Dashboard com os dados da base inicial (ANTES)
-Foram criados dashboards em Power BI a partir da base com valores ausentes, evidenciando categorias como “em branco” e “ilha desconhecida”, e o impacto dos NaNs nas análises por espécie/ilha/sexo. :contentReference[oaicite:10]{index=10}
+Foram criados dashboards em Power BI a partir da base com valores ausentes, evidenciando categorias como “em branco” e “ilha desconhecida”, e o impacto dos NaNs nas análises por espécie/ilha/sexo. 
 
 **Principais visuais (antes):**
-- Massa corporal média e tamanho médio da asa (antes) :contentReference[oaicite:11]{index=11}
-- Comprimento médio do bico e profundidade média do bico (antes) :contentReference[oaicite:12]{index=12}
-(Preview em PDF: páginas com “Dados Ausentes”). :contentReference[oaicite:13]{index=13}
+- Massa corporal média e tamanho médio da asa (antes)
+- Comprimento médio do bico e profundidade média do bico (antes) 
 
 ---
 
 ### 2) Imputação de colunas numéricas + justificativas
-**Colunas numéricas tratadas:** `bill_length_mm`, `bill_depth_mm`, `flipper_length_mm`, `body_mass_g`. :contentReference[oaicite:14]{index=14}
+**Colunas numéricas tratadas:** `bill_length_mm`, `bill_depth_mm`, `flipper_length_mm`, `body_mass_g`. 
 
-**Técnica escolhida:** **KNN Imputer (K=5, weights='distance')**, por utilizar registros semelhantes (“vizinhos”) ao invés de um valor global (como média/mediana), reduzindo distorções e respeitando o contexto local dos dados. :contentReference[oaicite:15]{index=15}
+**Técnica escolhida:** **KNN Imputer (K=5, weights='distance')**, por utilizar registros semelhantes (“vizinhos”) ao invés de um valor global (como média/mediana), reduzindo distorções e respeitando o contexto local dos dados. 
 
-**Pré-processamento:** normalização com **MinMaxScaler** (0 a 1), necessária porque o KNN usa distância e as variáveis estão em escalas diferentes (gramas vs milímetros). Depois, foi feita a desnormalização para retornar às unidades originais. :contentReference[oaicite:16]{index=16}
+**Pré-processamento:** normalização com **MinMaxScaler** (0 a 1), necessária porque o KNN usa distância e as variáveis estão em escalas diferentes (gramas vs milímetros). Depois, foi feita a desnormalização para retornar às unidades originais. 
 
-**Avaliação:** comparação visual das distribuições antes/depois indicou preservação do formato geral e melhora na consistência, com curvas mais simétricas e menos “picos” artificiais. :contentReference[oaicite:17]{index=17}
+**Avaliação:** comparação visual das distribuições antes/depois indicou preservação do formato geral e melhora na consistência, com curvas mais simétricas e menos “picos” artificiais. 
 
 ---
 
 ### 3) Imputação de colunas categóricas + justificativas
-**Colunas categóricas tratadas:** `species`, `island`, `sex`. :contentReference[oaicite:18]{index=18}
+**Colunas categóricas tratadas:** `species`, `island`, `sex`. 
 
-**Para `species` e `island`:** método **Forward Fill (ffill)**, escolhido porque havia organização sequencial em blocos (linhas seguidas com mesma espécie/ilha). Isso evita imputações aleatórias e mantém coerência local. :contentReference[oaicite:19]{index=19}
+**Para `species` e `island`:** método **Forward Fill (ffill)**, escolhido porque havia organização sequencial em blocos (linhas seguidas com mesma espécie/ilha). Isso evita imputações aleatórias e mantém coerência local. 
 
-**Para `sex`:** imputação por **característica morfológica**, relacionando `sex` com `bill_depth_mm` **dentro de cada espécie**, usando **medianas** (mais robustas a outliers) e atribuindo o sexo cuja mediana estivesse mais próxima do valor do registro. :contentReference[oaicite:20]{index=20}
+**Para `sex`:** imputação por **característica morfológica**, relacionando `sex` com `bill_depth_mm` **dentro de cada espécie**, usando **medianas** (mais robustas a outliers) e atribuindo o sexo cuja mediana estivesse mais próxima do valor do registro. 
 
 ---
 
 ### 4) Dashboard com os dados imputados (DEPOIS)
-Após a imputação, os dashboards passaram a exibir análises mais completas, sem categorias “em branco/desconhecido”, permitindo comparações mais confiáveis entre espécie/ilha/sexo. :contentReference[oaicite:21]{index=21}
+Após a imputação, os dashboards passaram a exibir análises mais completas, sem categorias “em branco/desconhecido”, permitindo comparações mais confiáveis entre espécie/ilha/sexo. 
 
 No dashboard imputado, por exemplo, destacam-se padrões como:
 - Gentoo machos de Biscoe com maior massa corporal média. 
-- Biscoe com maiores médias de nadadeira em vários grupos. :contentReference[oaicite:23]{index=23}
-
-(Preview em PDF: páginas com “Dados Imputados”). :contentReference[oaicite:24]{index=24}
+- Biscoe com maiores médias de nadadeira em vários grupos. 
 
 ---
 
 ## 🛠 Tecnologias utilizadas
-- **Python (Jupyter Notebook)**: pandas, numpy, scikit-learn (KNNImputer, MinMaxScaler) :contentReference[oaicite:25]{index=25}
+- **Python (Jupyter Notebook)**: pandas, numpy, scikit-learn (KNNImputer, MinMaxScaler) 
 - **Power BI**: dashboards antes/depois para comparação das distribuições 
 
 ---
