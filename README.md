@@ -88,4 +88,9 @@ No dashboard imputado, por exemplo, destacam-se padrões como:
 4. Consulte o relatório final (metodologia e justificativas):
    - `Penguins Dataset - Relatório Final.pdf`
 
+## 👩‍💻 Integrantes do grupo
 
+- [Isabel Baungartner](https://www.linkedin.com/in/isabel-baungartner-78a573296/)
+- [Julia Leandro](www.linkedin.com/in/juliasleandro)  
+- [Lavínia Oliveira](https://www.linkedin.com/in/lav%C3%ADnia-oliveira-santos/)
+- [Maria Eduarda Fonseca](https://www.linkedin.com/in/maria-eduarda-fonseca-nascimento-7a93a82ba/)
