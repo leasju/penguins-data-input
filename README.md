@@ -1,24 +1,14 @@
 # 🐧 Imputação de Dados no Dataset Penguins (Palmer Penguins)
 
-Projeto desenvolvido para a disciplina **Mineração e Visualização de Dados** (PUC-Campinas), com o objetivo de **corrigir (imputar) valores ausentes** no dataset Palmer Penguins e **comparar a distribuição dos dados antes e depois** das correções por meio de **dashboards no Power BI** e processamento/documentação em **Python (Jupyter Notebook)**. :contentReference[oaicite:1]{index=1}
+Projeto desenvolvido para a disciplina **Mineração e Visualização de Dados** (PUC-Campinas), com o objetivo de **corrigir (imputar) valores ausentes** no dataset Palmer Penguins e **comparar a distribuição dos dados antes e depois** das correções por meio de **dashboards no Power BI** e processamento/documentação em **Python (Jupyter Notebook)**.
+
+<p align="center">
+  <img src="/read-me-img/penguins.png" width="700">
+</p>
 
 ## 🎯 Enunciado (resumo)
 **Corrigir a base de dados Penguins** disponibilizada no notebook, mostrando a distribuição dos dados **antes e depois** das correções.  
-Trabalho em grupo (4 alunos) e avaliação em aula após arguição. :contentReference[oaicite:2]{index=2}
-
-### Critérios/Tópicos avaliados
-- Dashboard com os dados da base inicial (1pt)
-- Imputar colunas numéricas (1pt)
-- Justificativas colunas numéricas (4pts)
-- Imputar colunas categóricas (1pt)
-- Justificativas colunas categóricas (2pts)
-- Dashboard com dados da base imputada (1pt)
-> Dashboards em **Power BI** e processamento/discussão em **Python Notebook**, com etapas anotadas e avaliação do processo de imputação. :contentReference[oaicite:3]{index=3}
-
----
-
-## 👥 Grupo
-Trabalho em grupo (conjunto “Imputando”) com **4 integrantes**. :contentReference[oaicite:4]{index=4}
+Trabalho em grupo (4 alunos) e avaliação em aula após arguição. 
 
 ---
 
