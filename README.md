@@ -1,4 +1,4 @@
-# 🐧 Imputação de Dados no Dataset Penguins (Palmer Penguins)
+# Imputação de Dados no Dataset Penguins (Palmer Penguins)
 
 Projeto desenvolvido para a disciplina **Mineração e Visualização de Dados** (PUC-Campinas), com o objetivo de **corrigir (imputar) valores ausentes** no dataset Palmer Penguins e **comparar a distribuição dos dados antes e depois** das correções por meio de **dashboards no Power BI** e processamento/documentação em **Python (Jupyter Notebook)**.
 
